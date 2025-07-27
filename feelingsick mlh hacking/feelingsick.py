@@ -1,4 +1,4 @@
-G
+
 from google import genai
 client = genai.Client(api_key="gemini key")
 chat = client.chats.create(model="gemini-2.5-flash")
