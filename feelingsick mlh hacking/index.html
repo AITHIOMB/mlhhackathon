@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuickAid Symptom Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #0077cc;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 30px;
+      padding: 15px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>QuickAid Symptom Checker</h1>
+  <p>Describe how you're feeling:</p>
+  <textarea id="symptomInput" placeholder="e.g. I feel dizzy and my legs gave out last night..."></textarea>
+  <button onclick="checkSymptoms()">Check Symptoms</button>
+
+  <div id="result"></div>
+
+  <script>
+    async function checkSymptoms() {
+      const input = document.getElementById("symptomInput").value;
+      const resultDiv = document.getElementById("result");
+
+      // Simulating response (replace this with Gemini API or backend call)
+      resultDiv.innerHTML = "<strong>Possible causes:</strong><ul><li>Low blood pressure</li><li>Nerve compression</li><li>MS (multiple sclerosis)</li></ul><p><strong>Questions to ask your doctor:</strong> Have you experienced numbness, blurred vision, or tingling recently?</p><p><strong>Resources:</strong> <a href='https://www.mayoclinic.org/' target='_blank'>Mayo Clinic</a></p>";
+    }
+  </script>
+</body>
+</html>
